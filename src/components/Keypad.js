@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { api } from './api'
 
 export default function Keypad({ usedKeys }) {
   const [letters, setLetters] = useState(null)
 
+
   useEffect(() => {
-    fetch('https://peaceful-llama-5b1f55.netlify.app/letters')
+    fetch(`${api}/letters`)
       .then(res => res.json())
       .then(json => {
         setLetters(json)

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import { api } from './components/api'
 import Wordle from './components/Wordle'
 
 function App() {
   const [solution, setSolution] = useState(null)
   
   useEffect(() => {
-    fetch('https://peaceful-llama-5b1f55.netlify.app/solutions')
+    fetch(`${api}/solutions`)
       .then(res => res.json())
       .then(json => {
         // random int between 0 & 14
