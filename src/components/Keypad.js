@@ -4,7 +4,7 @@ export default function Keypad({ usedKeys }) {
   const [letters, setLetters] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3001/letters')
+    fetch('https://peaceful-llama-5b1f55.netlify.app/letters')
       .then(res => res.json())
       .then(json => {
         setLetters(json)
