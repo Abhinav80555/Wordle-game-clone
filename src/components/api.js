@@ -1,1 +1,1 @@
-export const api="http://localhost:5001";
+export const api="https://6250687d977373573f3ccfe1.mockapi.io";
